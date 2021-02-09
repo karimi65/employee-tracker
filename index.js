@@ -146,3 +146,12 @@ const addEmployee = () => {
             })
     })
 }
+
+// View All Departments
+const viewAllDepartments = () => {
+    connection.query('SELECT * FROM department', (err, data) => {
+        if (err) throw err
+        console.table(data)
+        firstAction()
+    })
+}
