@@ -197,3 +197,8 @@ const updateRoles = () => {
 
 }
 
+// Exit
+const exit = () => {
+    connection.end()
+    process.exit()
+}
