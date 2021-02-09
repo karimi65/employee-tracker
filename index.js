@@ -167,7 +167,7 @@ const viewAllRoles = () => {
 
 // View All Employyees
 const viewAllEmployees = () => {
-    connection.query('SELECT * FROM employee', (err, data) => {
+    connection.query('SELECT employee.id, first_name, last_name, title, salary,role_id, department_id, manager_id, name FROM employee INNER JOIN role ON employee.role_id = role.id INNER JOIN department ON employee.role_id = department.id;', (err, data) => {
         if (err) throw err
         console.table(data)
         firstAction()
