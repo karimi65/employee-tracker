@@ -111,3 +111,38 @@ const addRole = () => {
             })
     })
 }
+
+// Add Employee
+const addEmployee = () => {
+    inquirer.prompt([
+        {
+            name: "firstName",
+            type: "input",
+            message: "What is the employee\'s first name?"
+        },
+        {
+            name: "lastName",
+            type: "input",
+            message: "What is the employee\'s last name?"
+        },
+        {
+            name: "roleId",
+            type: "input",
+            message: "What is the employee\'s role id?"
+        },
+        {
+            name: "managerId",
+            type: "input",
+            message: "What is the employee\'s manager id?"
+        }
+
+    ]).then(answer => {
+        connection.query(`INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);`,
+            [answer.firstName, answer.lastName, answer.roleId, answer.managerId],
+            (err) => {
+                if (err) throw err
+                console.log('Employee Added!')
+                firstAction()
+            })
+    })
+}
