@@ -173,3 +173,27 @@ const viewAllEmployees = () => {
         firstAction()
     })
 }
+
+// Update Employee Roles
+const updateRoles = () => {
+    inquirer.prompt([
+        {
+            name: "id",
+            type: "input",
+            message: "What is the employee id you want to change?"
+        },
+        {
+            name: "newId",
+            type: "input",
+            message: "What is the new role id?"
+        }
+    ]).then(answer => {
+        connection.query('UPDATE employee SET role_id = ? WHERE id = ?', [answer.newId, answer.id], (err) => {
+            if (err) throw err
+            console.log('Role ID Changed!')
+            firstAction()
+        })
+    })
+
+}
+
