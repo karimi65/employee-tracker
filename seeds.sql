@@ -26,8 +26,26 @@ CREATE TABLE employee(
 );
 
 INSERT INTO department(name) VALUES ('Engineering');
+INSERT INTO department(name) VALUES ('HR');
+INSERT INTO department(name) VALUES ('Safety');
+INSERT INTO department(name) VALUES ('Finance');
+
+
 INSERT INTO role(title, salary, department_id) VALUES ('Software Engineer', 120000, 314);
+INSERT INTO role(title, salary, department_id) VALUES ('Manager', 80000, 310);
+INSERT INTO role(title, salary, department_id) VALUES ('Safety Officer', 60000, 311);
+INSERT INTO role(title, salary, department_id) VALUES ('Accountant', 65000, 313);
+
+
 INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Porya', 'Arya', 20, 29);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('David', 'Anelka', 20, 25);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Diego', 'Vargas', 15, 10);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Andrea', 'Wenger', 15, 10);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Ahmed', 'Patel', 30, 35);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Jamie', 'Ozil', 30, 35);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Mary', 'Nickson', 40, 45);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Sara', 'Floyd', 40, 45);
+
 
 SELECT * FROM department;
 SELECT * FROM role;
