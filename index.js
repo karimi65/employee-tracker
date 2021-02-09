@@ -155,3 +155,21 @@ const viewAllDepartments = () => {
         firstAction()
     })
 }
+
+// View All Roles
+const viewAllRoles = () => {
+    connection.query('SELECT * FROM role', (err, data) => {
+        if (err) throw err
+        console.table(data)
+        firstAction()
+    })
+}
+
+// View All Employyees
+const viewAllEmployees = () => {
+    connection.query('SELECT * FROM employee', (err, data) => {
+        if (err) throw err
+        console.table(data)
+        firstAction()
+    })
+}
