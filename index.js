@@ -34,7 +34,7 @@ const firstAction = () => {
             choices: choices
         }
     ]).then(answer => {
-        // console.log(answer)
+        console.log(answer)
         if (answer.action === choices[0]) {
             addDepartment()
         }
@@ -81,3 +81,33 @@ const addDepartment = () => {
     })
 }
 
+
+// Add Role
+const addRole = () => {
+    inquirer.prompt([
+        {
+            name: "title",
+            type: "input",
+            message: "What is the title of the role?"
+        },
+        {
+            name: "salary",
+            type: "input",
+            message: "How much is the salary for this role?"
+        },
+        {
+            name: "departmentId",
+            type: "input",
+            message: "What is the department ID of the role?"
+        }
+
+    ]).then(answer => {
+        connection.query(`INSERT INTO role(title, salary, department_id) VALUES (?, ?, ?);`,
+            [answer.title, answer.salary, answer.departmentId],
+            (err) => {
+                if (err) throw err
+                console.log('Role Added!')
+                firstAction()
+            })
+    })
+}
