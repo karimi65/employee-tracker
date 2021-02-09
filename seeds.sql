@@ -37,7 +37,7 @@ INSERT INTO role(title, salary, department_id) VALUES ('Safety Officer', 60000, 
 INSERT INTO role(title, salary, department_id) VALUES ('Accountant', 65000, 313);
 
 
-INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Porya', 'Arya', 20, 29);
+INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Porya', 'Arya', 20, 25);
 INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('David', 'Anelka', 20, 25);
 INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Diego', 'Vargas', 15, 10);
 INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES ('Andrea', 'Wenger', 15, 10);
