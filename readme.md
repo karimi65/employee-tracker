@@ -1,5 +1,6 @@
 # Employee Tracker
 
+![Employee Tracker](./assets/ET12.JPG)
 
 As a business owner,
 I want to be able to view and manage the departments, roles, and employees in my company
