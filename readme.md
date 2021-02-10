@@ -7,7 +7,7 @@ I want to be able to view and manage the departments, roles, and employees in my
 So that I can organize and plan my business
 
 
-[Link to Video]()
+[Link to Video](https://drive.google.com/file/d/1RBVWuEX-ANJEEYTHNqYc3O5mDu1Vw6cy/view?usp=sharing)
 
 
 ## Table of Content
